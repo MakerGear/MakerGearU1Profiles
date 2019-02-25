@@ -150,9 +150,9 @@
       <gcodeZoffset>0</gcodeZoffset>
       <overrideMachineDefinition>1</overrideMachineDefinition>
       <machineTypeOverride>0</machineTypeOverride>
-      <strokeXoverride>400</strokeXoverride>
-      <strokeYoverride>350</strokeYoverride>
-      <strokeZoverride>330</strokeZoverride>
+      <strokeXoverride>406</strokeXoverride>
+      <strokeYoverride>355</strokeYoverride>
+      <strokeZoverride>350</strokeZoverride>
       <originOffsetXoverride>0</originOffsetXoverride>
       <originOffsetYoverride>0</originOffsetYoverride>
       <originOffsetZoverride>0</originOffsetZoverride>
