@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="U1 Rev0 Dual PLA v0.8" version="2019-07-12 14:25:13" app="S3D-Software 4.1.2">
+<profile name="U1 Rev0 Dual PLA v0.8" version="2019-07-31 16:33:32" app="S3D-Software 4.1.2">
   <baseProfile>M3ID R1 Base</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Default</printQuality>
@@ -189,9 +189,9 @@
   <filamentDiameters>1.75|1.75|1.75|1.75|1.75|1.75</filamentDiameters>
   <filamentPricesPerKg>35|35|35|35|35|35</filamentPricesPerKg>
   <filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
-  <useMinPrintHeight>1</useMinPrintHeight>
+  <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
-  <useMaxPrintHeight>1</useMaxPrintHeight>
+  <useMaxPrintHeight>0</useMaxPrintHeight>
   <maxPrintHeight>2</maxPrintHeight>
   <useDiaphragm>0</useDiaphragm>
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
