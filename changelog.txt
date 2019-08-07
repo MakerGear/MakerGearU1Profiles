@@ -1,0 +1,5 @@
+8/7/19
+-Added three new untested profiles for .35 Nozzles based off of M3 profiles to the experimental folder
+	Single Tool - Simplify3D/_Experimental/U1R0-MakerGear-PLA-0.35-Brass-v.1.fff
+	Multiple Tools - Simplify3D/_Experimental/U1R0-dualPrints-T0-PLA-0.35-Brass-T1-PLA-0.35-Brass-v.1.fff
+	Duplication Mode - Simplify3D/_Experimental/U1R0-duplication-MakerGear-PLA-0.35-Brass-v.1.fff
