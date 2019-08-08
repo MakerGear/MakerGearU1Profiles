@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="U1 Rev0 Duplication Model ABS .5 Nozzle v0.8" version="2019-08-08 14:22:19" app="S3D-Software 4.1.2">
+<profile name="U1 Rev0 Duplication Model ABS .5 Nozzle v0.8" version="2019-08-08 14:50:08" app="S3D-Software 4.1.2">
   <baseProfile>M3ID R1 Base</baseProfile>
   <printMaterial>ABS</printMaterial>
   <printQuality>Default</printQuality>
@@ -9,7 +9,7 @@
     <diameter>0.5</diameter>
     <autoWidth>1</autoWidth>
     <width>0.6</width>
-    <extrusionMultiplier>1.01</extrusionMultiplier>
+    <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>0.5</retractionDistance>
     <extraRestartDistance>-0.03</extraRestartDistance>
