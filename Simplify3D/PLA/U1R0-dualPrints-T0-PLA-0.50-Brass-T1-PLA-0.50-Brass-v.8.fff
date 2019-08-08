@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="U1 Rev0 Dual PLA v0.8" version="2019-07-31 16:33:32" app="S3D-Software 4.1.2">
+<profile name="U1 Rev0 Dual PLA v0.8" version="2019-08-08 12:16:46" app="S3D-Software 4.1.2">
   <baseProfile>M3ID R1 Base</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Default</printQuality>
@@ -9,7 +9,7 @@
     <diameter>0.5</diameter>
     <autoWidth>1</autoWidth>
     <width>0.6</width>
-    <extrusionMultiplier>0.91</extrusionMultiplier>
+    <extrusionMultiplier>0.95</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>0.5</retractionDistance>
     <extraRestartDistance>-0.02</extraRestartDistance>
@@ -25,7 +25,7 @@
     <diameter>0.5</diameter>
     <autoWidth>1</autoWidth>
     <width>0.6</width>
-    <extrusionMultiplier>0.91</extrusionMultiplier>
+    <extrusionMultiplier>0.95</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>0.5</retractionDistance>
     <extraRestartDistance>-0.02</extraRestartDistance>
@@ -47,9 +47,9 @@
   <startPointOriginY>0</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>70</firstLayerHeightPercentage>
-  <firstLayerWidthPercentage>90</firstLayerWidthPercentage>
-  <firstLayerUnderspeed>0.8</firstLayerUnderspeed>
+  <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
+  <firstLayerWidthPercentage>120</firstLayerWidthPercentage>
+  <firstLayerUnderspeed>0.7</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
   <raftTopLayers>3</raftTopLayers>
@@ -59,15 +59,15 @@
   <raftTopInfill>87</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
   <useSkirt>1</useSkirt>
-  <skirtExtruder>0</skirtExtruder>
+  <skirtExtruder>999</skirtExtruder>
   <skirtLayers>1</skirtLayers>
-  <skirtOutlines>2</skirtOutlines>
-  <skirtOffset>2</skirtOffset>
+  <skirtOutlines>3</skirtOutlines>
+  <skirtOffset>5</skirtOffset>
   <usePrimePillar>1</usePrimePillar>
   <primePillarExtruder>999</primePillarExtruder>
-  <primePillarWidth>10</primePillarWidth>
+  <primePillarWidth>12.5</primePillarWidth>
   <primePillarLocation>0</primePillarLocation>
-  <primePillarSpeedMultiplier>0.7</primePillarSpeedMultiplier>
+  <primePillarSpeedMultiplier>0.8</primePillarSpeedMultiplier>
   <useOozeShield>0</useOozeShield>
   <oozeShieldExtruder>999</oozeShieldExtruder>
   <oozeShieldOffset>3</oozeShieldOffset>
@@ -76,14 +76,14 @@
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
   <infillExtruder>0</infillExtruder>
-  <internalInfillPattern>Fast Honeycomb</internalInfillPattern>
+  <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>25</infillPercentage>
+  <infillPercentage>35</infillPercentage>
   <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <internalInfillAngles>0</internalInfillAngles>
+  <internalInfillAngles>45,-45</internalInfillAngles>
   <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>1</generateSupport>
@@ -96,10 +96,10 @@
   <denseSupportInfillPercentage>90</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
   <supportHorizontalPartOffset>0.45</supportHorizontalPartOffset>
-  <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
-  <supportLowerSeparationLayers>2</supportLowerSeparationLayers>
+  <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
+  <supportLowerSeparationLayers>0</supportLowerSeparationLayers>
   <supportType>0</supportType>
-  <supportGridSpacing>4</supportGridSpacing>
+  <supportGridSpacing>3</supportGridSpacing>
   <maxOverhangAngle>55</maxOverhangAngle>
   <supportAngles>0</supportAngles>
   <temperatureController name="Left Extruder (T0)">
@@ -164,11 +164,11 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride>MakerGear_U1.stl</printerModelsOverride>
-  <startingGcode>;U1 Dual Wizard Extruder Startup Script ,;Rev 5,,;set custom firmware settings,M201 X150 Y150 Z10 U150 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z30 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,; turn off T0 hot ends to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,,M104 T0 S[extruder0_temperature],M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,T1 					; Switch to T1,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,T0					;switch to T0,G1 X360 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X240 E20 F1000 	;deposit purge line,G1 X230 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,M564 S1 			;safteys on,,,M106 P2 S0; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
+  <startingGcode>;U1 Dual Wizard Extruder Startup Script,,;set custom firmware settings,M201 X150 Y150 Z50 U500 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z10 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,,; turn off T0 hot ends to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,,M104 T0 S[extruder0_temperature],M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,T1 					; Switch to T1,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,T0					;switch to T0,G1 X360 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X240 E20 F1000 	;deposit purge line,G1 X230 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,M564 S1 			;safteys on,,,M106 P2 S100; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
   <layerChangeGcode>,</layerChangeGcode>
   <retractionGcode>,</retractionGcode>
   <toolChangeGcode> {IF NEWTOOL=0}M106 P3 S0,{IF NEWTOOL=0}M106 P0 S[fan_speed_pwm],,{IF NEWTOOL=1}M106 P0 S0,{IF NEWTOOL=1}M106 P3 S[fan_speed_pwm],</toolChangeGcode>
-  <endingGcode>M106 P2 S0 ; turn off exhaust fan, ,M104 S0 ; turn off extruder,M104 S0 T0 ; turn off extruder,M104 S0 T1; turn off extruder,M140 P0 S0 ; turn off bed,M140 P1 S0 ; turn off bed,M140 P2 S0 ; turn off bed,M140 P3 S0 ; turn off bed,M106 S0 ; turn off cooling fan,G91 ; relative mode,G1 Z20 ; move Z down 20mm,G90;  absolute mode,,G28 XY ; home tool/s,T0 ; defualt tool should always be T0,,,,</endingGcode>
+  <endingGcode>M106 P2 S0 ; turn off exhaust fan, ,M104 S0 ; turn off extruder,M104 S0 T0 ; turn off extruder,M104 S0 T1; turn off extruder,M140 P0 S0 ; turn off bed,M140 P1 S0 ; turn off bed,M140 P2 S0 ; turn off bed,M140 P3 S0 ; turn off bed,M106 S0 ; turn off cooling fan,G91 ; relative mode,G1 Z20 ; move Z down 20mm,G90;  absolute mode,,G28 XY ; home tool/s,M502 ; set to firmware default values,T0 ; defualt tool should always be T0,,,,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
@@ -181,8 +181,8 @@
   <rapidZspeed>1000</rapidZspeed>
   <minBridgingArea>5</minBridgingArea>
   <bridgingExtraInflation>5</bridgingExtraInflation>
-  <bridgingExtrusionMultiplier>1.1</bridgingExtrusionMultiplier>
-  <bridgingSpeedMultiplier>0.75</bridgingSpeedMultiplier>
+  <bridgingExtrusionMultiplier>1.05</bridgingExtrusionMultiplier>
+  <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
   <fixedBridgingAngle>90</fixedBridgingAngle>
   <applyBridgingToPerimeters>1</applyBridgingToPerimeters>
@@ -192,7 +192,7 @@
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
   <useMaxPrintHeight>0</useMaxPrintHeight>
-  <maxPrintHeight>2</maxPrintHeight>
+  <maxPrintHeight>0</maxPrintHeight>
   <useDiaphragm>0</useDiaphragm>
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
   <robustSlicing>1</robustSlicing>
@@ -226,7 +226,7 @@
     <useSkirt>1</useSkirt>
     <usePrimePillar>1</usePrimePillar>
     <useOozeShield>0</useOozeShield>
-    <startingGcode>;U1 Left Extruder(T0) Dual Startup Script ,;Rev 5,,;set custom firmware settings,M201 X150 Y150 Z10 U150 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z30 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,; turn off T0 hot ends to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,,M104 T0 S[extruder0_temperature],M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,T1 					; Switch to T1,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,T0					;switch to T0,G1 X360 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X240 E20 F1000 	;deposit purge line,G1 X230 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,M564 S1 			;safteys on,,,M106 P2 S0; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
+    <startingGcode>;U1 Left Extruder(T0) Dual Startup Script,,;set custom firmware settings,M201 X150 Y150 Z50 U500 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z10 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,,; turn off T0 hot ends to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,,M104 T0 S[extruder0_temperature],M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,T1 					; Switch to T1,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,T0					;switch to T0,G1 X360 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X240 E20 F1000 	;deposit purge line,G1 X230 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,M564 S1 			;safteys on,,,M106 P2 S100; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="off"/>
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="off"/>
   </autoConfigureExtruders>
@@ -239,22 +239,22 @@
     <denseSupportExtruder>1</denseSupportExtruder>
     <useSkirt>1</useSkirt>
     <usePrimePillar>1</usePrimePillar>
-    <useOozeShield>1</useOozeShield>
-    <startingGcode>;U1 Right Extruder(T1) Dual Startup Script ,;Rev 5,,;set custom firmware settings,M201 X150 Y150 Z10 U150 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z30 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,; turn off T0 hot ends to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,,M104 T0 S[extruder0_temperature],M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,T0 					; implied by G28 but explicilty called here. ,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,T1					;switch to T1,G1 X360 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X240 E20 F1000 	;deposit purge line,G1 X230 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,M564 S1 			;safteys on,,,M106 P2 S0; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
+    <useOozeShield>0</useOozeShield>
+    <startingGcode>;U1 Right Extruder(T1) Dual Startup Script,,;set custom firmware settings,M201 X150 Y150 Z50 U500 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z10 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,,; turn off T0 hot ends to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,,M104 T0 S[extruder0_temperature],M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,T0 					; implied by G28 but explicilty called here. ,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,T1					;switch to T1,G1 X360 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X240 E20 F1000 	;deposit purge line,G1 X230 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,M564 S1 			;safteys on,,,M106 P2 S100; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="off"/>
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="off"/>
   </autoConfigureExtruders>
   <autoConfigureExtruders name="Both Extruders for Dual Wizard" allowedToolheads="2">
     <primaryExtruder>0</primaryExtruder>
     <raftExtruder>0</raftExtruder>
-    <skirtExtruder>0</skirtExtruder>
+    <skirtExtruder>999</skirtExtruder>
     <infillExtruder>0</infillExtruder>
     <supportExtruder>0</supportExtruder>
     <denseSupportExtruder>0</denseSupportExtruder>
     <useSkirt>1</useSkirt>
     <usePrimePillar>1</usePrimePillar>
     <useOozeShield>0</useOozeShield>
-    <startingGcode>;U1 Dual Wizard Extruder Startup Script ,;Rev 5,,;set custom firmware settings,M201 X150 Y150 Z10 U150 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z30 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,; turn off T0 hot ends to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,,M104 T0 S[extruder0_temperature],M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,T1 					; Switch to T1,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,T0					;switch to T0,G1 X360 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X240 E20 F1000 	;deposit purge line,G1 X230 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,M564 S1 			;safteys on,,,M106 P2 S0; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
+    <startingGcode>;U1 Dual Wizard Extruder Startup Script,,;set custom firmware settings,M201 X150 Y150 Z50 U500 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z10 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,,; turn off T0 hot ends to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,,M104 T0 S[extruder0_temperature],M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,T1 					; Switch to T1,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,T0					;switch to T0,G1 X360 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X240 E20 F1000 	;deposit purge line,G1 X230 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,,M564 S1 			;safteys on,,,M106 P2 S100; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="off"/>
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="off"/>
   </autoConfigureExtruders>
@@ -263,14 +263,14 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>25</infillPercentage>
+    <infillPercentage>35</infillPercentage>
     <supportInfillPercentage>45</supportInfillPercentage>
     <defaultSpeed>1500</defaultSpeed>
     <useRaft>0</useRaft>
-    <internalInfillPattern>Fast Honeycomb</internalInfillPattern>
+    <internalInfillPattern>Rectilinear</internalInfillPattern>
     <rapidXYspeed>4000</rapidXYspeed>
-    <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
-    <supportLowerSeparationLayers>2</supportLowerSeparationLayers>
+    <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
+    <supportLowerSeparationLayers>0</supportLowerSeparationLayers>
   </autoConfigureQuality>
   <autoConfigureQuality name="Fast">
     <layerHeight>0.4</layerHeight>
@@ -279,12 +279,12 @@
     <skirtLayers>1</skirtLayers>
     <infillPercentage>15</infillPercentage>
     <supportInfillPercentage>45</supportInfillPercentage>
-    <defaultSpeed>1500</defaultSpeed>
+    <defaultSpeed>2500</defaultSpeed>
     <useRaft>0</useRaft>
-    <internalInfillPattern>Fast Honeycomb</internalInfillPattern>
+    <internalInfillPattern>Rectilinear</internalInfillPattern>
     <rapidXYspeed>4000</rapidXYspeed>
     <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
-    <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
+    <supportLowerSeparationLayers>0</supportLowerSeparationLayers>
   </autoConfigureQuality>
   <autoConfigureMaterial name="PLA">
     <temperatureController name="Left Extruder (T0)">
