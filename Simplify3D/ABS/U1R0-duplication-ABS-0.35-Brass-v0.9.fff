@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="Abrasive tech_Ultra One_Duplication" version="2019-10-21 14:33:14" app="S3D-Software 4.1.2">
+<profile name="Ultra One_Duplication" version="2019-10-21 14:33:14" app="S3D-Software 4.1.2">
   <baseProfile>M3ID R1 Base</baseProfile>
   <printMaterial>ABS</printMaterial>
   <printQuality>Default</printQuality>
