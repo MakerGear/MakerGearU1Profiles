@@ -1,1 +1,0 @@
-Attention !!! We are working on dual print profiles with the new 'v.9' high speed setting. Stay tuned !
