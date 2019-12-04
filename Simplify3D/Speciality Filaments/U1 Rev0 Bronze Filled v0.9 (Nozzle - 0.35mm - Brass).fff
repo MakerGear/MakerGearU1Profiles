@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<profile name="U1 Rev0 Brass Filled v0.9 (Nozzle - 0.35mm - Brass)" version="2019-12-04 11:07:28" app="S3D-Software 4.1.2">
+<profile name="U1 Rev0 Bronze Filled v0.9 (Nozzle - 0.35mm - Brass)" version="2019-12-04 16:22:43" app="S3D-Software 4.1.2">
   <baseProfile>M3ID R1 Base</baseProfile>
-  <printMaterial>Brass Filled</printMaterial>
+  <printMaterial>Bronze Filled</printMaterial>
   <printQuality>Default</printQuality>
   <printExtruders>Single Mode - Left Extruder(T0)</printExtruders>
   <extruder name="Left Extruder (T0)">
@@ -258,7 +258,7 @@
     <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
   </autoConfigureQuality>
-  <autoConfigureMaterial name="Brass Filled">
+  <autoConfigureMaterial name="Bronze Filled">
     <temperatureController name="Left Extruder (T0)">
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
