@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="U1 Rev0 CFR Nylon v0.9 (Nozzle - 0.35mm - Stainless Steel)" version="2019-12-04 11:09:41" app="S3D-Software 4.1.2">
+<profile name="U1 Rev0 CFR Nylon v0.9 (Nozzle - 0.35mm - Stainless Steel)" version="2019-12-12 16:05:04" app="S3D-Software 4.1.2">
   <baseProfile>M3ID R1 Base</baseProfile>
   <printMaterial>CFR Nylon</printMaterial>
   <printQuality>Default</printQuality>
@@ -32,7 +32,7 @@
     <retractionZLift>0</retractionZLift>
     <retractionSpeed>2500</retractionSpeed>
     <useCoasting>1</useCoasting>
-    <coastingDistance>0.05</coastingDistance>
+    <coastingDistance>0.07</coastingDistance>
     <useWipe>0</useWipe>
     <wipeDistance>0.25</wipeDistance>
   </extruder>
@@ -78,8 +78,8 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>20</infillPercentage>
-  <outlineOverlapPercentage>12</outlineOverlapPercentage>
+  <infillPercentage>15</infillPercentage>
+  <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>10</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
@@ -118,7 +118,7 @@
     <temperatureNumber>2</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="100"/>
+    <setpoint layer="1" temperature="80"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
@@ -248,7 +248,7 @@
     <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>20</infillPercentage>
+    <infillPercentage>15</infillPercentage>
     <supportInfillPercentage>35</supportInfillPercentage>
     <defaultSpeed>3200</defaultSpeed>
     <useRaft>0</useRaft>
@@ -274,7 +274,7 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>1</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="100"/>
+      <setpoint layer="1" temperature="80"/>
     </temperatureController>
   </autoConfigureMaterial>
 </profile>
