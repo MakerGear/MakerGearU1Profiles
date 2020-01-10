@@ -1,1 +1,1 @@
-Attention !!! Check out the new 'v.9' high speed profiles for ABS. Many more profiles and materials on the way !
+Check out the new 'v.9' high speed profiles for ABS
