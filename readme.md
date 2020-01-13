@@ -1,5 +1,5 @@
 # ![MakerGear Logo](https://cdn.shopify.com/s/files/1/0030/7372/files/mg_logo_colors_small.jpg) Ultra One Profiles for Simplify3D
-Official Repository of Simplify3D profiles for the MakerGear Ultra One 3D Printer. Check back frequently because we're adding new materials continuously.
+Official Repository of Simplify3D profiles for the MakerGear Ultra One 3D Printer. We're adding new materials continuously so check back frequently.
 
 ### Summary
 | Profile | Single | Dual | BVOH | Dupl. | Vase | Fast | Single | Dual | Dupl. |
@@ -12,14 +12,24 @@ Official Repository of Simplify3D profiles for the MakerGear Ultra One 3D Printe
 | CFR/Nylon | ✓ |  |  |  |  |  |  |  |  |
 | CFR/PETG | ✓ |  |  |  |  |  |  |  |  |
 | Brozne | ✓ |  |  |  |  |  |  |  |  |
+| CFR/ABS | ✓ |  |  |  |  |  |  |  |  |
+| CFR/PLA | ✓ |  |  |  |  |  |  |  |  |
+| Glass-Fiber/Nylon |  |  |  |  |  |  | ✓ |  |  |
+| HD Glass (Form Futura) | ✓ |  |  |  |  |  |  |  |  |
+| HT Pla | ✓ |  |  |  |  |  |  |  |  |
+| Polycarbonate (PC) | ✓ |  |  |  |  |  |  |  |  |
+| Polypropylene (PP) | ✓ |  |  |  |  |  |  |  |  |
+| TPU |  |  |  |  |  |  | ✓ |  |  |
+| ePA-GF Nylon (eSun) | ✓ |  |  |  |  |  |  |  |  |
+| iOn Nylon (3DXTech) | ✓ |  |  |  |  |  |  |  |  |
 
 Interested in printing with a material not listed here? We can work with you to develop a profile. Email us at info@makergear.com.
 
 ### Profile Description
 | Abbreviation | Description |
 | ----------- | ----------- |
-| Single | Tool Zero (T0) uses the specified material |
-| Dual | Both extruders use the material specified |
+| Single | Extruder/Tool Zero (T0) uses the specified material |
+| Dual | Both extruders (T0 and T1) use the material specified |
 | BVOH | T0 uses the material specified and T1 uses BVOH support material |
 | Dupl. | Both extruders can be used in duplication mode to print two copies of the same object at once |
 | Vase | Vase mode - only a single outer layer of the object is printed |
