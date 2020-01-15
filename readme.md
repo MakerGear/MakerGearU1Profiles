@@ -29,7 +29,7 @@ Interested in printing with a material not listed here? We can work with you to 
 | Abbreviation | Description |
 | ----------- | ----------- |
 | Single | Extruder/Tool Zero (T0) uses the specified material |
-| Dual | Both extruders (T0 and T1) use the material specified |
+| Dual | Great for two-color prints - Both extruders (T0 and T1) use the same type of material |
 | BVOH | T0 uses the material specified and T1 uses BVOH support material |
 | Dupl. | Both extruders can be used in duplication mode to print two copies of the same object at once |
 | Vase | Vase mode - only a single outer layer of the object is printed |
