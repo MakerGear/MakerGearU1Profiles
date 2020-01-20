@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<profile name="U1 Rev0 PC v0.9" version="2020-01-10 16:25:50" app="S3D-Software 4.1.2">
+<profile name="U1 Rev0 PC v0.9" version="2020-01-20 10:53:45" app="S3D-Software 4.1.2">
   <baseProfile>M3ID R1 Base</baseProfile>
   <printMaterial>PC</printMaterial>
   <printQuality>Default</printQuality>
-  <printExtruders>Single Mode - Left Extruder(T0)</printExtruders>
+  <printExtruders>Single Mode - Right Extruder (T1)</printExtruders>
   <extruder name="Left Extruder (T0)">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.35</diameter>
@@ -36,7 +36,7 @@
     <useWipe>0</useWipe>
     <wipeDistance>0.25</wipeDistance>
   </extruder>
-  <primaryExtruder>0</primaryExtruder>
+  <primaryExtruder>1</primaryExtruder>
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>4</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
@@ -51,7 +51,7 @@
   <firstLayerWidthPercentage>110</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
-  <raftExtruder>0</raftExtruder>
+  <raftExtruder>1</raftExtruder>
   <raftTopLayers>3</raftTopLayers>
   <raftBaseLayers>2</raftBaseLayers>
   <raftOffset>5</raftOffset>
@@ -59,7 +59,7 @@
   <raftTopInfill>85</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.6</aboveRaftSpeedMultiplier>
   <useSkirt>1</useSkirt>
-  <skirtExtruder>0</skirtExtruder>
+  <skirtExtruder>1</skirtExtruder>
   <skirtLayers>1</skirtLayers>
   <skirtOutlines>2</skirtOutlines>
   <skirtOffset>5</skirtOffset>
@@ -75,7 +75,7 @@
   <oozeShieldSidewallShape>1</oozeShieldSidewallShape>
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
-  <infillExtruder>0</infillExtruder>
+  <infillExtruder>1</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
   <infillPercentage>25</infillPercentage>
@@ -87,11 +87,11 @@
   <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>1</generateSupport>
-  <supportExtruder>0</supportExtruder>
+  <supportExtruder>1</supportExtruder>
   <supportInfillPercentage>35</supportInfillPercentage>
   <supportExtraInflation>0.5</supportExtraInflation>
   <supportBaseLayers>1</supportBaseLayers>
-  <denseSupportExtruder>0</denseSupportExtruder>
+  <denseSupportExtruder>1</denseSupportExtruder>
   <denseSupportLayers>0</denseSupportLayers>
   <denseSupportInfillPercentage>90</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
@@ -105,14 +105,14 @@
   <temperatureController name="Left Extruder (T0)">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
-    <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="280"/>
+    <stabilizeAtStartup>0</stabilizeAtStartup>
+    <setpoint layer="1" temperature="0"/>
   </temperatureController>
   <temperatureController name="Right Extruder (T1)">
     <temperatureNumber>1</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
-    <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="0"/>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="280"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>2</temperatureNumber>
@@ -163,7 +163,7 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride>MakerGear_U1.stl</printerModelsOverride>
-  <startingGcode>;U1 Left Extruder(T0) Only Startup Script,,M203 X18000.00 Y18000.00 Z1200.00 U18000.00 E1800.00 ; U1 max feedrate mm/minute,        M201 X1200 Y1200 Z10 U1200 E2000                    ; U1 Maximum Acceleration axes mm/s^2,        M204 P2000 T2000           ; U1 Maximum Acceleration printing / travel mm/s^2,        M566 X300 Y300 Z60 U300 E600 ; U1  instantenous speed change 'jerk' in mm/minute,        M593 F0                     ;make sure dynamix acceleration is off    ,,; turn off T0 hot end to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D0 S100  ;extruder rate for T0 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,M104 T0 S[extruder0_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,;***Initial Purge***,,T0 					; implied by G28 but explicilty called here. ,G1 Z20.0 F6000      ; Move Z to 20,G92 E0              ; Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,M564 S1 			;safteys on,,,M106 P2 S0; exhaust fan change S value to enable (50 is a good starting value),,,; end startup script</startingGcode>
+  <startingGcode>;U1 Right Extruder(T1) Only Startup Script,,M203 X18000.00 Y18000.00 Z1200.00 U18000.00 E1800.00 ; U1 max feedrate mm/minute,        M201 X1200 Y1200 Z10 U1200 E2000                    ; U1 Maximum Acceleration axes mm/s^2,        M204 P2000 T2000           ; U1 Maximum Acceleration printing / travel mm/s^2,        M566 X300 Y300 Z60 U300 E600 ; U1  instantenous speed change 'jerk' in mm/minute,        M593 F0                     ;make sure dynamix acceleration is off  ,,; turn off T0 hot end to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,,T1					;Switch to T1 for purge,G1 Z20.0 F6000      ;Move Z to 20,G92 E0              ;Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,M564 S1 			;safteys on,,,M106 P2 S0; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
   <layerChangeGcode>,</layerChangeGcode>
   <retractionGcode>,</retractionGcode>
   <toolChangeGcode> {IF NEWTOOL=0}M106 P3 S0,{IF NEWTOOL=0}M106 P0 S[fan_speed_pwm],,{IF NEWTOOL=1}M106 P0 S0,{IF NEWTOOL=1}M106 P3 S[fan_speed_pwm],</toolChangeGcode>
@@ -241,7 +241,7 @@
     <useOozeShield>0</useOozeShield>
     <startingGcode>;U1 Right Extruder(T1) Only Startup Script,,M203 X18000.00 Y18000.00 Z1200.00 U18000.00 E1800.00 ; U1 max feedrate mm/minute,        M201 X1200 Y1200 Z10 U1200 E2000                    ; U1 Maximum Acceleration axes mm/s^2,        M204 P2000 T2000           ; U1 Maximum Acceleration printing / travel mm/s^2,        M566 X300 Y300 Z60 U300 E600 ; U1  instantenous speed change 'jerk' in mm/minute,        M593 F0                     ;make sure dynamix acceleration is off  ,,; turn off T0 hot end to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,,,M221 D1 S100  ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G28 ; 1)Home XY 2)Home Z 3)Auto Level 3)Home Z 4) Mesh Level, ,;Get hot end up to temp,M104 T1 S[extruder1_temperature],M116 ; wait for all  heaters to get to temp . This will wait for cooldown if there is overshoot. ,,,,,;***Initial Purge***,,T1					;Switch to T1 for purge,G1 Z20.0 F6000      ;Move Z to 20,G92 E0              ;Zero Extruder,M564 S0 		 	;safteys off,G1 X160 Y5 F1000 	;move to unused front edge,G1 Z0.30 F1000   	;move closer to the bed,G1 X40 E20 F1000 	;deposit purge line,G1 X30 Z0.05 F1000  ;wipe off tail,G1 Z10				;move away from bed,G1 Y11 				;move to y safe zone,G92 E0 				;zero extruder,M564 S1 			;safteys on,,,M106 P2 S0; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
     <toggleTemperatureController name="Left Extruder (T0)" status="off" stabilize="off"/>
-    <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="off"/>
+    <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on"/>
   </autoConfigureExtruders>
   <autoConfigureQuality name="Default">
     <layerHeight>0.2</layerHeight>
@@ -267,8 +267,8 @@
     <temperatureController name="Right Extruder (T1)">
       <temperatureNumber>1</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
-      <stabilizeAtStartup>0</stabilizeAtStartup>
-      <setpoint layer="1" temperature="200"/>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="280"/>
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>2</temperatureNumber>
