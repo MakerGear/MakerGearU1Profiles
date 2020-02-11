@@ -2,7 +2,7 @@
 Official Repository of Simplify3D profiles for the MakerGear Ultra One 3D Printer. We're adding new materials continuously so check back frequently.
 
 ### Summary
-| Profile | Single | Dual | BVOH | Dupl. | Vase | Fast | Single | Dual | Dupl. |
+| Material | Single | Dual | BVOH | Dupl. | Vase | Fast | Single | Dual | Dupl. |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 |  | .5mm | .5mm | .5mm | .5mm | .5mm | .5mm | .35mm | .35mm | .35mm |
 | ABS | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |  | ✓ |
@@ -22,6 +22,7 @@ Official Repository of Simplify3D profiles for the MakerGear Ultra One 3D Printe
 | TPU |  |  |  |  |  |  | ✓ |  |  |
 | ePA-GF Nylon (eSun) | ✓ |  |  |  |  |  |  |  |  |
 | iOn Nylon (3DXTech) | ✓ |  |  |  |  |  |  |  |  |
+| Polycast (Polymaker) | ✓ |  |  |  |  |  |  |  |  |
 
 Interested in printing with a material not listed here? We can work with you to develop a profile. Email us at info@makergear.com.
 
