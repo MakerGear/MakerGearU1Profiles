@@ -1,39 +1,39 @@
 <?xml version="1.0"?>
-<profile name="U1 Rev0 Duplication Model ASA .5 Nozzle v0.8" version="2019-08-08 14:51:27" app="S3D-Software 4.1.2">
+<profile name="U1 Rev0 Dual Extruders (Duplication Model) PLA v0.9" version="2020-02-17 09:05:10" app="S3D-Software 4.1.2">
   <baseProfile>M3ID R1 Base</baseProfile>
-  <printMaterial>ASA</printMaterial>
+  <printMaterial>PLA</printMaterial>
   <printQuality>Default</printQuality>
   <printExtruders>Duplication</printExtruders>
   <extruder name="Duplication">
     <toolheadNumber>2</toolheadNumber>
     <diameter>0.5</diameter>
-    <autoWidth>1</autoWidth>
+    <autoWidth>0</autoWidth>
     <width>0.6</width>
-    <extrusionMultiplier>1</extrusionMultiplier>
+    <extrusionMultiplier>0.9</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>0.5</retractionDistance>
+    <retractionDistance>1</retractionDistance>
     <extraRestartDistance>-0.03</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>1500</retractionSpeed>
+    <retractionSpeed>6000</retractionSpeed>
     <useCoasting>1</useCoasting>
-    <coastingDistance>0.5</coastingDistance>
+    <coastingDistance>0.07</coastingDistance>
     <useWipe>0</useWipe>
     <wipeDistance>0.25</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2</layerHeight>
-  <topSolidLayers>3</topSolidLayers>
+  <topSolidLayers>4</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>2</perimeterOutlines>
-  <printPerimetersInsideOut>0</printPerimetersInsideOut>
+  <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>3</startPointOption>
   <startPointOriginX>0</startPointOriginX>
   <startPointOriginY>0</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
-  <firstLayerWidthPercentage>120</firstLayerWidthPercentage>
-  <firstLayerUnderspeed>0.7</firstLayerUnderspeed>
+  <firstLayerHeightPercentage>90</firstLayerHeightPercentage>
+  <firstLayerWidthPercentage>105</firstLayerWidthPercentage>
+  <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
   <raftTopLayers>3</raftTopLayers>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>35</infillPercentage>
+  <infillPercentage>20</infillPercentage>
   <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -72,16 +72,16 @@
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>1</generateSupport>
   <supportExtruder>0</supportExtruder>
-  <supportInfillPercentage>45</supportInfillPercentage>
-  <supportExtraInflation>0.5</supportExtraInflation>
+  <supportInfillPercentage>35</supportInfillPercentage>
+  <supportExtraInflation>1</supportExtraInflation>
   <supportBaseLayers>1</supportBaseLayers>
   <denseSupportExtruder>0</denseSupportExtruder>
   <denseSupportLayers>0</denseSupportLayers>
   <denseSupportInfillPercentage>90</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
-  <supportHorizontalPartOffset>0.45</supportHorizontalPartOffset>
-  <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
-  <supportLowerSeparationLayers>0</supportLowerSeparationLayers>
+  <supportHorizontalPartOffset>0.5</supportHorizontalPartOffset>
+  <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
+  <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
   <supportType>0</supportType>
   <supportGridSpacing>3</supportGridSpacing>
   <maxOverhangAngle>55</maxOverhangAngle>
@@ -90,26 +90,27 @@
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="250"/>
+    <setpoint layer="1" temperature="205"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>2</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
     <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="100"/>
+    <setpoint layer="1" temperature="60"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
+    <setpoint layer="2" speed="100"/>
   </fanSpeed>
   <blipFanToFullPower>0</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
-  <minSpeedLayerTime>10</minSpeedLayerTime>
-  <minCoolingSpeedSlowdown>30</minCoolingSpeedSlowdown>
+  <minSpeedLayerTime>15</minSpeedLayerTime>
+  <minCoolingSpeedSlowdown>15</minCoolingSpeedSlowdown>
   <increaseFanForCooling>0</increaseFanForCooling>
   <minFanLayerTime>45</minFanLayerTime>
   <maxCoolingFanSpeed>100</maxCoolingFanSpeed>
-  <increaseFanForBridging>1</increaseFanForBridging>
-  <bridgingFanSpeed>30</bridgingFanSpeed>
+  <increaseFanForBridging>0</increaseFanForBridging>
+  <bridgingFanSpeed>100</bridgingFanSpeed>
   <use5D>1</use5D>
   <relativeEdistances>0</relativeEdistances>
   <allowEaxisZeroing>1</allowEaxisZeroing>
@@ -141,7 +142,7 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride>MakerGear_U1.stl</printerModelsOverride>
-  <startingGcode>;U1 Rev0 Duplication Script - T0 and T1,,;set custom firmware settings,M201 X150 Y150 Z50 U500 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z10 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,,; turn off T0 hot end to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,M104 T1 S0,M104 T2 S0,,,M221 D0 S100 ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100 ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G29 S2 ; Clear any meshes ,G28 XY; home XY,G28 Z ;Home Z,G32    ;Auto Level ,G28 Z ; rehome Z,,;Get hot ends up to temp,M104 T0 S[extruder0_temperature],M104 T1 S[extruder0_temperature],M104 T2 S[extruder0_temperature],M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,,;***Initial Purge***,T2,G1 Z20.0 F6000             ; Move Z to 20,,G92 E0                     ; Zero Extruder,,M564 S0 ; safteys off,G1 X160 Y5F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z10,G1 Y11 ;safe zone,G92 E0,,M564 S1 ; safteys on,,,M106 P2 S30; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
+  <startingGcode>;U1 Rev0 Duplication Script - T0 and T1,,M203 X18000.00 Y18000.00 Z1200.00 U18000.00 E1800.00 ; U1 max feedrate mm/minute,        M201 X1200 Y1200 Z10 U1200 E2000                    ; U1 Maximum Acceleration axes mm/s^2,        M204 P2000 T2000           ; U1 Maximum Acceleration printing / travel mm/s^2,        M566 X300 Y300 Z60 U300 E600 ; U1  instantenous speed change 'jerk' in mm/minute,        M593 F0                     ;make sure dynamix acceleration is off ,,,; turn off T0 hot end to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,M104 T1 S0,M104 T2 S0,,,M221 D0 S100 ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100 ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G29 S2 ; Clear any meshes ,G28 XY; home XY,G28 Z ;Home Z,G32    ;Auto Level ,G28 Z ; rehome Z,,;Get hot ends up to temp,M104 T0 S[extruder0_temperature],M104 T1 S[extruder0_temperature],M104 T2 S[extruder0_temperature],M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,,;***Initial Purge***,T2,G1 Z20.0 F6000             ; Move Z to 20,,G92 E0                     ; Zero Extruder,,M564 S0 ; safteys off,G1 X160 Y5F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z10,G1 Y11 ;safe zone,G92 E0,,M564 S1 ; safteys on,,,M106 P2 S100; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
   <layerChangeGcode>,</layerChangeGcode>
   <retractionGcode>,</retractionGcode>
   <toolChangeGcode> {IF NEWTOOL=0}M106 P3 S0,{IF NEWTOOL=0}M106 P0 S[fan_speed_pwm],,{IF NEWTOOL=1}M106 P0 S0,{IF NEWTOOL=1}M106 P3 S[fan_speed_pwm],</toolChangeGcode>
@@ -150,18 +151,18 @@
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
   <postProcessing>,</postProcessing>
-  <defaultSpeed>1500</defaultSpeed>
+  <defaultSpeed>3800</defaultSpeed>
   <outlineUnderspeed>0.6</outlineUnderspeed>
-  <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
-  <supportUnderspeed>0.9</supportUnderspeed>
-  <rapidXYspeed>4000</rapidXYspeed>
-  <rapidZspeed>1000</rapidZspeed>
+  <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
+  <supportUnderspeed>0.8</supportUnderspeed>
+  <rapidXYspeed>6000</rapidXYspeed>
+  <rapidZspeed>1200</rapidZspeed>
   <minBridgingArea>5</minBridgingArea>
   <bridgingExtraInflation>5</bridgingExtraInflation>
-  <bridgingExtrusionMultiplier>1.05</bridgingExtrusionMultiplier>
+  <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
   <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
-  <fixedBridgingAngle>90</fixedBridgingAngle>
+  <fixedBridgingAngle>0</fixedBridgingAngle>
   <applyBridgingToPerimeters>1</applyBridgingToPerimeters>
   <filamentDiameters>1.75|1.75|1.75|1.75|1.75|1.75</filamentDiameters>
   <filamentPricesPerKg>35|35|35|35|35|35</filamentPricesPerKg>
@@ -181,15 +182,15 @@
   <retractWhileWiping>1</retractWhileWiping>
   <onlyWipeOutlines>1</onlyWipeOutlines>
   <avoidCrossingOutline>1</avoidCrossingOutline>
-  <maxMovementDetourFactor>10</maxMovementDetourFactor>
-  <toolChangeRetractionDistance>25</toolChangeRetractionDistance>
-  <toolChangeExtraRestartDistance>0.35</toolChangeExtraRestartDistance>
+  <maxMovementDetourFactor>5</maxMovementDetourFactor>
+  <toolChangeRetractionDistance>24.5</toolChangeRetractionDistance>
+  <toolChangeExtraRestartDistance>-0.25</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>10000</toolChangeRetractionSpeed>
   <externalThinWallType>0</externalThinWallType>
   <internalThinWallType>2</internalThinWallType>
-  <thinWallAllowedOverlapPercentage>25</thinWallAllowedOverlapPercentage>
-  <singleExtrusionMinLength>1</singleExtrusionMinLength>
-  <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
+  <thinWallAllowedOverlapPercentage>20</thinWallAllowedOverlapPercentage>
+  <singleExtrusionMinLength>5</singleExtrusionMinLength>
+  <singleExtrusionMinPrintingWidthPercentage>90</singleExtrusionMinPrintingWidthPercentage>
   <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
@@ -203,49 +204,35 @@
     <useSkirt>1</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
-    <startingGcode>;U1 Rev0 Duplication Script - T0 and T1,,;set custom firmware settings,M201 X150 Y150 Z50 U500 E1000 ;Set max acceleration mm/second^2,M204 P1000 T1000			   ;set max printing and travel acceleration mm/s^2	,M566 X75 Y75 Z10 U75 E80:80   ;set max  allowable instantaneous speed change mm/min,,,; turn off T0 hot end to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,M104 T1 S0,M104 T2 S0,,,M221 D0 S100 ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100 ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G29 S2 ; Clear any meshes ,G28 XY; home XY,G28 Z ;Home Z,G32    ;Auto Level ,G28 Z ; rehome Z,,;Get hot ends up to temp,M104 T0 S[extruder0_temperature],M104 T1 S[extruder0_temperature],M104 T2 S[extruder0_temperature],M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,,;***Initial Purge***,T2,G1 Z20.0 F6000             ; Move Z to 20,,G92 E0                     ; Zero Extruder,,M564 S0 ; safteys off,G1 X160 Y5F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z10,G1 Y11 ;safe zone,G92 E0,,M564 S1 ; safteys on,,,M106 P2 S30; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
+    <startingGcode>;U1 Rev0 Duplication Script - T0 and T1,,M203 X18000.00 Y18000.00 Z1200.00 U18000.00 E1800.00 ; U1 max feedrate mm/minute,        M201 X1200 Y1200 Z10 U1200 E2000                    ; U1 Maximum Acceleration axes mm/s^2,        M204 P2000 T2000           ; U1 Maximum Acceleration printing / travel mm/s^2,        M566 X300 Y300 Z60 U300 E600 ; U1  instantenous speed change 'jerk' in mm/minute,        M593 F0                     ;make sure dynamix acceleration is off ,,,; turn off T0 hot end to reduce ooze on the bed during startup. NOTE: this does not explicitly wait for the hotends to totally cool down,M104 T0 S0,M104 T1 S0,M104 T2 S0,,,M221 D0 S100 ;extruder rate for T0 is set in S3D so set to 100% here,M221 D1 S100 ;extruder rate for T1 is set in S3D so set to 100% here,,,M140 P0 S[bed2_temperature]				;Middle bed heater strip,M140 P1 S[bed2_temperature]				;2nd from left and second from right bed heater,M140 P2 S[bed2_temperature]				;Left bed heater strip,M140 P3 S[bed2_temperature]				;Right bed heater strip,,M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,G29 S2 ; Clear any meshes ,G28 XY; home XY,G28 Z ;Home Z,G32    ;Auto Level ,G28 Z ; rehome Z,,;Get hot ends up to temp,M104 T0 S[extruder0_temperature],M104 T1 S[extruder0_temperature],M104 T2 S[extruder0_temperature],M116 ; wait for all bed heaters to get to temp before probing. This will wait for cooldown if there is overshoot. ,,,;***Initial Purge***,T2,G1 Z20.0 F6000             ; Move Z to 20,,G92 E0                     ; Zero Extruder,,M564 S0 ; safteys off,G1 X160 Y5F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z10,G1 Y11 ;safe zone,G92 E0,,M564 S1 ; safteys on,,,M106 P2 S100; exhaust fan change S value to enable (50 is a good starting value),,; end startup script</startingGcode>
     <toggleTemperatureController name="Duplication" status="on" stabilize="off"/>
   </autoConfigureExtruders>
   <autoConfigureQuality name="Default">
     <layerHeight>0.2</layerHeight>
-    <topSolidLayers>3</topSolidLayers>
+    <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>35</infillPercentage>
-    <supportInfillPercentage>45</supportInfillPercentage>
-    <defaultSpeed>1500</defaultSpeed>
+    <infillPercentage>20</infillPercentage>
+    <supportInfillPercentage>35</supportInfillPercentage>
+    <defaultSpeed>3800</defaultSpeed>
     <useRaft>0</useRaft>
     <internalInfillPattern>Rectilinear</internalInfillPattern>
-    <rapidXYspeed>4000</rapidXYspeed>
-    <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
-    <supportLowerSeparationLayers>0</supportLowerSeparationLayers>
+    <rapidXYspeed>6000</rapidXYspeed>
+    <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
+    <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
   </autoConfigureQuality>
-  <autoConfigureQuality name="Fast">
-    <layerHeight>0.4</layerHeight>
-    <topSolidLayers>3</topSolidLayers>
-    <bottomSolidLayers>3</bottomSolidLayers>
-    <skirtLayers>1</skirtLayers>
-    <infillPercentage>15</infillPercentage>
-    <supportInfillPercentage>45</supportInfillPercentage>
-    <defaultSpeed>2500</defaultSpeed>
-    <useRaft>0</useRaft>
-    <internalInfillPattern>Rectilinear</internalInfillPattern>
-    <rapidXYspeed>4000</rapidXYspeed>
-    <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
-    <supportLowerSeparationLayers>0</supportLowerSeparationLayers>
-  </autoConfigureQuality>
-  <autoConfigureMaterial name="ASA">
+  <autoConfigureMaterial name="PLA">
     <temperatureController name="Duplication">
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>0</stabilizeAtStartup>
-      <setpoint layer="1" temperature="250"/>
+      <setpoint layer="1" temperature="205"/>
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>1</isHeatedBed>
       <stabilizeAtStartup>0</stabilizeAtStartup>
-      <setpoint layer="1" temperature="100"/>
+      <setpoint layer="1" temperature="60"/>
     </temperatureController>
   </autoConfigureMaterial>
 </profile>

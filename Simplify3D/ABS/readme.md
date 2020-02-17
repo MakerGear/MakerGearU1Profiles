@@ -1,1 +1,0 @@
-Check out the new 'v.9' high speed profiles for ABS
