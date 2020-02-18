@@ -49,4 +49,7 @@ Note: The left extruder (primary) is called Tool 0, or T0. The right extruder (s
 All profiles can be modified to different nozzle size in Simplify3D by changing: 1) the nozzle diameter, and 2) the extrusion width.
 
 ### Problems?
-Don't fret - we're here to help! Visit our [Support Page](https://www.makergear.com/pages/support).
+Don't fret - we're here to help! Visit our [Support Page](https://www.makergear.com/pages/support) to contact us.
+
+### Anti-Collision Features
+The Ultra One has built in safeties at the front and back of the machine to prevent collisions. For more information and how to disable them, see [this article](https://makergear.zendesk.com/hc/en-us/articles/360030848352).
